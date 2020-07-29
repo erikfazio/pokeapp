@@ -6,9 +6,11 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.3.2",
         "@testing-library/user-event": "^7.1.2",
+        "classnames": "^2.2.6",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "react-scripts": "3.4.1"
+        "react-scripts": "3.4.1",
+        "tailwindcss": "^1.6.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -16,7 +18,10 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "lint": "eslint --fix .",
-        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+        "build:tailwind": "tailwindcss build src/index.css -o src/tailwind.output.css",
+        "prestart": "npm run build:tailwind",
+        "prebuild": "npm run build:tailwind"
     },
     "eslintConfig": {
         "extends": "react-app"
