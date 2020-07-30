@@ -1,6 +1,6 @@
 import React from 'react';
 import PokemonType from './PokemonType';
-import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
+import PokemonStatsChart from './PokemonStatsChart';
 
 function PokemonCard({ pokemon }) {
     const data = pokemon.stats.map((stat) => {
@@ -37,13 +37,7 @@ function PokemonCard({ pokemon }) {
                     </span>
                 </div>
             </div>
-            <div className="bg-white shadow-lg rounded-lg  p-6 text-center">
-                <RadarChart outerRadius={90} width={700} height={400} data={data}>
-                    <PolarGrid />
-                    <PolarAngleAxis dataKey="subject" />
-                    <Radar name="Pikachu" dataKey="A" stroke="red" fill="red" fillOpacity={0.6} />
-                </RadarChart>
-            </div>
+            <PokemonStatsChart data={data} />
         </div>
     );
 }
