@@ -13,7 +13,7 @@ function PokemonCard({ pokemon }) {
     });
 
     return (
-        <div className="md:flex justify-around md:bg-gray-200 p-6 rounded">
+        <div className="flex flex-col md:flex-row justify-around md:bg-gray-200 p-6 rounded">
             <div className="bg-white shadow-lg rounded-lg  p-6 text-center">
                 <span className="text-6xl font-bold text-gray-400">#{pokemon.order}</span>
                 <img className="mx-auto" src={pokemon.sprites.front_default} />
