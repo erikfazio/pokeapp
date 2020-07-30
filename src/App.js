@@ -6,21 +6,31 @@ function App() {
     const [pokemon, setPokemon] = useState({});
     const [input, setInput] = useState('');
 
-    useEffect(() => {
-        const apiUrl = `https://pokeapi.co/api/v2/pokemon/${}`;
+    function fetchPokemon() {
+        const apiUrl = `https://pokeapi.co/api/v2/pokemon/${input}`;
         axios.get(apiUrl).then((result) => {
             setPokemon(result.data);
         });
-    }, [pokemon]);
+    }
 
-    function handleClick(event) {
+    function handleChange(event) {
         setInput(event.target.value);
+    }
+
+    function handleClick() {
+        fetchPokemon();
+        setInput('');
     }
 
     return (
         <div className="container mx-auto">
-            <div className="text-center mt-4">
-                <input className="border rounded mr-2 p-2" type="text" />
+            <div className="text-center mt-4 mb-4">
+                <input
+                    className="border rounded mr-2 p-2"
+                    type="text"
+                    onChange={handleChange}
+                    value={input}
+                />
                 <button
                     className="bg-gray-400 p-2 rounded-lg"
                     type="button"
@@ -29,7 +39,7 @@ function App() {
                     Search
                 </button>
             </div>
-            <PokemonCard pokemon={pokemon} />
+            {pokemon.moves && <PokemonCard pokemon={pokemon} />}
         </div>
     );
 }

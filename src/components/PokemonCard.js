@@ -22,11 +22,6 @@ function PokemonCard({ pokemon }) {
                         {pokemon.abilities.map((ability) => ability.ability.name).join(', ')}
                     </span>
                 </div>
-                <ul>
-                    {pokemon.types.map((type) => {
-                        return <li>{type.type.name}</li>;
-                    })}
-                </ul>
             </div>
         </div>
     );
