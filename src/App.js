@@ -7,7 +7,7 @@ function App() {
     const [input, setInput] = useState('');
 
     function fetchPokemon() {
-        const apiUrl = `https://pokeapi.co/api/v2/pokemon/${input}`;
+        const apiUrl = `https://pokeapi.co/api/v2/pokemon/${input.toLowerCase()}`;
         axios.get(apiUrl).then((result) => {
             setPokemon(result.data);
         });
