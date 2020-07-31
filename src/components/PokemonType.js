@@ -23,7 +23,7 @@ const typeList = {
 
 function PokemonType({ type }) {
     return (
-        <div className={`${typeList[type]} inline-block p-1 rounded font-bold uppercase`}>
+        <div className={`${typeList[type]} inline-block mr-2 p-1 rounded font-bold uppercase`}>
             {type}
         </div>
     );
