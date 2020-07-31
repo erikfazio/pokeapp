@@ -3,7 +3,7 @@ All the Pokémon data you'll ever need in a clean and modern web app.
 
 ![pokeapp](https://github.com/erikfazio/pokeapp/blob/master/static/pokeapp.png)
 
-You can try the app at this address.
+You can try Pokeapp at [this address](https://pokewebapp.netlify.app/).
 
 Built with:
 
