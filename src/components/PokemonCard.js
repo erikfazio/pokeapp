@@ -20,8 +20,8 @@ function PokemonCard({ pokemon }) {
                 <span className="font-bold uppercase">{pokemon.name}</span>
                 <div className="p-4">
                     <span>
-                        <span className="font-bold">Weight:</span> {pokemon.weight} kg,{' '}
-                        <span className="font-bold">Height: </span> {pokemon.height}'
+                        <span className="font-bold">Weight:</span> {pokemon.weight / 10} kg,{' '}
+                        <span className="font-bold">Height: </span> {pokemon.height / 10} m
                     </span>
                 </div>
                 <div className="p-4">

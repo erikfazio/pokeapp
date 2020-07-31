@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from './components/Navbar';
 import PokemonCard from './components/PokemonCard';
@@ -33,6 +33,7 @@ function App() {
                         type="text"
                         onChange={handleChange}
                         value={input}
+                        placeholder="Type pokémon name"
                     />
                     <button
                         className="bg-red-600 font-bold text-white p-2 rounded-lg"
