@@ -5,7 +5,9 @@ import PokemonStatsChart from './PokemonStatsChart';
 function PokemonCard({ pokemon }) {
     const data = pokemon.stats.map((stat) => {
         return {
-            subject: stat.stat.name.toUpperCase(),
+            subject: stat.stat.name.includes('special-')
+                ? stat.stat.name.toUpperCase().replace('SPECIAL-', 'SP-')
+                : stat.stat.name.toUpperCase(),
             A: stat.base_stat
         };
     });
