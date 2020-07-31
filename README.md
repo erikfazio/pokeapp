@@ -3,6 +3,8 @@ All the Pokémon data you'll ever need in a clean and modern web app.
 
 ![pokeapp](https://github.com/erikfazio/pokeapp/blob/master/static/pokeapp.png)
 
+You can try the app at this address.
+
 Built with:
 
 - [React.js](https://reactjs.org/)
