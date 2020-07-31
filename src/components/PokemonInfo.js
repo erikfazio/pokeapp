@@ -5,7 +5,7 @@ function PokemonInfo({ pokemon }) {
     return (
         <div className="p-6 bg-white shadow-lg mr-6 rounded-lg text-center">
             <span className="text-6xl font-bold text-gray-400">#{pokemon.order}</span>
-            <img className="mx-auto" src={pokemon.sprites.front_default} />
+            <img className="mx-auto" src={pokemon.sprites.front_default} alt={pokemon.name} />
             <span className="font-bold uppercase">{pokemon.name}</span>
             <div className="p-4">
                 <span>
