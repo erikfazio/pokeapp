@@ -19,7 +19,7 @@ Built with:
    yarn
    ```
 
-2. Start the server
+2. Start the app
 
    ```bash
    yarn start
